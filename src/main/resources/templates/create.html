@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Crear Producto</title>
+
+<link
+	href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+	rel="stylesheet"
+	integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+	crossorigin="anonymous">
+
+</head>
+<body>
+
+	<div class="container bg-dark text-white">
+		<h1>Crear Producto</h1>
+
+		<form th:action="@{/productos/save}" method="post">
+			<div class="row">
+				<div class="col">
+					<input type="text" class="form-control" placeholder="Nombre"
+						aria-label="nombre" name="nombre" required>
+				</div>
+				<div class="col">
+					<input type="text" class="form-control" placeholder="Descripcion"
+						aria-label="descripcion" name="descripcion" required>
+				</div>
+				<div class="col">
+					<input type="number" class="form-control" placeholder="Precio"
+						aria-label="Precio" name="precio" required>
+				</div>			
+			</div>
+			<h1>Ingrese los datos de los productos deseados</h1>
+			<button type="submit" class="btn btn-success">Guardar</button>
+			
+		</form>
+
+	</div>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Editar Producto</title>
+
+<link
+	href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+	rel="stylesheet"
+	integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+	crossorigin="anonymous">
+
+</head>
+<body>
+
+	<div class="container bg-dark text-white">
+		<h1>Editar Producto</h1>
+
+		<form th:action="@{/productos/save}" method="post">
+		<input type="hidden" name="id" th:value="${producto.id}">
+			<div class="row">
+				<div class="col">
+					<input type="text" class="form-control" th:placeholder="${producto.nombre}"
+						aria-label="nombre" name="nombre" th:value=${producto.nombre}>
+				</div>
+				<div class="col">
+					<input type="text" class="form-control" th:placeholder="${producto.descripcion}"
+						aria-label="descripcion" name="descripcion" th:value=${producto.descripcion}>
+				</div>
+				<div class="col">
+					<input type="number" class="form-control" th:placeholder="${producto.precio}"
+						aria-label="Precio" name="precio" th:value=${producto.precio}>
+						
+				</div>			
+			</div>
+			<h1>Ingrese los datos de los productos deseados</h1>
+			<button type="submit" class="btn btn-success">Actualizar</button>
+			
+		</form>
+
+	</div>
+
+</body>
+</html>
